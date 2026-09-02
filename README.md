@@ -5,8 +5,9 @@ Et mindre full stack projekt til at øve REST, JSON og databasekald med dynamisk
 ![foto på vej](docs/demo.gif)
 ---
 ## Hvad er PokéType?
-Det er enormt kedeligt for de små at lære at skrive computer og stave til "hest" og "hund" osv. 
+Det er enormt kedeligt for de små at lære at skrive på tastatur og skulle stave til "hest" og "hund" osv. 
 Af inspiration fra min niece (som er helt tosset med Pokémon) kom idéen af at lave et skriftspil, hvor man blot skriver en Pokémons navn for at "fange" den.
+På den måde får de kendskab til hvor tasterne er, uden at de mister opmærksomheden. :)
 
 ## Sådan virker det
 - Backend henter og cacher Pokémon-data (navn, type, sprite) fra PokeAPI i en lokal MySQL-database
