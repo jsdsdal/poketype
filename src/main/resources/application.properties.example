@@ -1,0 +1,8 @@
+spring.application.name=PokeType
+
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/poketype
+spring.datasource.username=whosthatpokemon
+spring.datasource.password=itspikachu
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
