@@ -36,6 +36,20 @@ Af inspiration fra min niece (som er helt tosset med Pokémon) kom idéen af at 
 **Frontend**
 - HTML, CSS, vanilla JavaScript (ingen framework)
 
+## Fremtidsplaner:
+- Visuelt flair
+     - Lydfeedback ved tastefejl
+     - Basale animationer
+     - Baggrund + typeskrift.
+     - osv.
+- Hovedmenu
+
+Og det meget optimistiske:
+- Evne til at gemme sin progression, rent faktisk "fange" pokémon og beholde dem
+- Meget basal sten/saks/papir kamp logik (ingen movesets - bare type matchet mod type)
+- Mere end bare de første 151, med forskellige sværhedsgrader (længere = sværere?)
+- ... osv?
+
 ## Anerkendelse
 Stort tak til [PokeAPI](https://pokeapi.co/) for at stille data og sprites frit til rådighed.
 Pokémon og alle relaterede navne/billeder tilhører Nintendo/Game Freak/The Pokémon Company.
