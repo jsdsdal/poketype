@@ -1,5 +1,12 @@
 let currentPokemon = null;
 let currentIndex = 0;
+let currentScreen = "menu"; // "menu" | "playing"
+
+function showScreen(screen) {
+    currentScreen = screen;
+    document.getElementById("menuScreen").style.display = screen === "menu" ? "block" : "none";
+    document.getElementById("gameScreen").style.display = screen === "playing" ? "block" : "none";
+}
 
 async function loadNewPokemon() {
     const response = await fetch("/pokemon/random");
