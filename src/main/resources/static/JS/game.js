@@ -21,7 +21,7 @@ function renderName() {
     const nameDisplay = document.getElementById("nameDisplay");
     nameDisplay.innerHTML = ""; // ryd op før vi tegner igen
 
-    const letters = currentPokemon.name.split(""); // "eevee" -> ["e","e","v","e","e"]
+    const letters = currentPokemon.name.split("");
 
     letters.forEach((letter, index) => {
         const span = document.createElement("span");
@@ -49,7 +49,7 @@ document.addEventListener("keydown", (event) => {
         renderName();
 
         if (currentIndex === currentPokemon.name.length) {
-            setTimeout(loadNewPokemon, 800); // lille pause så man kan se "fangsten"
+            setTimeout(loadNewPokemon, 800);
         }
     }
 });
