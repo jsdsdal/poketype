@@ -18,7 +18,7 @@ public class InitData implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        if (pokemonRepository.count() > 0) return; // undgå at seede igen ved hver opstart
+        if (pokemonRepository.count() < 151) return; // undgå at seede igen ved hver opstart
 
         for (int id = 1; id <= 151; id++) {
             pokeApiService.fetchAndSavePokemon(id);        }
