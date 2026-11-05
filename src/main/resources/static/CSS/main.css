@@ -1,4 +1,52 @@
-.correct {
 
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background: #e9f0e8;
+}
+
+.game-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem 1rem;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 44rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+}
+
+.scoreboard {
+    display: flex;
+    gap: 1rem;
+}
+
+.score-item {
+    flex: 1;
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .game-card {
+        padding: 1.25rem;
+    }
 }

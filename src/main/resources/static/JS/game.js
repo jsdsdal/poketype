@@ -1,6 +1,34 @@
 let currentPokemon = null;
 let currentIndex = 0;
 let currentScreen = "menu"; // "menu" | "playing"
+let score = 0;
+let catchStreak = 0;
+
+function awardCatch(pokemonName) {
+    catchStreak++;
+
+    const basePoints = 10;
+    const lengthBonus = pokemonName.length * 2;
+    const streakBonus = Math.min((catchStreak - 1) * 5, 25);
+
+    const earned = basePoints + lengthBonus + streakBonus;
+
+    score += earned;
+
+    updateScoreDisplay();
+
+    return earned;
+}
+
+function resetStreak() {
+    catchStreak = 0;
+    updateScoreDisplay();
+}
+
+function updateScoreDisplay() {
+    document.querySelector("#score").textContent = score;
+    document.querySelector("#streak").textContent = catchStreak;
+}
 
 function showScreen(screen) {
     currentScreen = screen;
