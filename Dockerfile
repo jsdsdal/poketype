@@ -17,9 +17,6 @@ FROM eclipse-temurin:25-jre
 
 WORKDIR /app
 
-# samme workaround i runtime
-ENV JAVA_TOOL_OPTIONS="-XX:+UnlockDiagnosticVMOptions -XX:-UseIntPolyIntrinsics"
-
 COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
