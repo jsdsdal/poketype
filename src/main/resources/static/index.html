@@ -1,17 +1,54 @@
+
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéType</title>
-    <style>
-        .letter { font-size: 2rem; margin: 0 2px; }
-        .correct { color: green; }
-        .current { text-decoration: underline; }
-    </style>
+    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
-<img id="sprite" src="" alt="pokemon sprite" width="150">
-<div class="input" id="nameDisplay"></div>
+
+<main class="game-page">
+    <div class="game-container">
+
+        <header class="game-header">
+            <h1>PokéType</h1>
+            <p>Catch them all, one letter at a time!</p>
+        </header>
+
+        <section class="scoreboard">
+            <div class="score-item">
+                <span class="score-label">Score</span>
+                <span id="score">0</span>
+            </div>
+
+            <div class="score-item">
+                <span class="score-label">Catch streak</span>
+                <span id="streak">0</span>
+            </div>
+        </section>
+
+        <section class="game-card">
+            <p class="instruction">A wild Pokémon appeared!</p>
+
+            <img id="sprite" src="" alt="Pokémon">
+
+            <h2>Type its name to catch it!</h2>
+
+            <div id="nameDisplay" class="name-display"></div>
+
+            <p id="feedback" class="feedback" aria-live="polite">
+                Start typing to catch your Pokémon.
+            </p>
+        </section>
+
+        <footer>
+            <p>PokéType  - beta </p>
+        </footer>
+
+    </div>
+</main>
 
 <script src="JS/game.js"></script>
 </body>
