@@ -27,8 +27,8 @@ public class PokemonRestController {
         return allPokemon.get(randomIndex);
     }
 
-  @GetMapping("/pokemon/{id}")
-  public Pokemon getPokemon(@PathVariable String id) {
+    @GetMapping("/pokemon/{id}")
+    public Pokemon getPokemon(@PathVariable String id) {
       Optional<Pokemon> pokemon = pokemonRepository.findById(id);
       return pokemon.orElse(null);
   }

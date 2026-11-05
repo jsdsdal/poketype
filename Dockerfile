@@ -1,0 +1,27 @@
+
+# Build
+FROM maven:3.9.12-eclipse-temurin-25 AS build
+
+WORKDIR /app
+
+# workaround til JDK 25 bug på JIT compiler i VM
+ENV MAVEN_OPTS="-XX:+UnlockDiagnosticVMOptions -XX:-UseIntPolyIntrinsics"
+
+COPY . .
+
+RUN chmod +x mvnw
+RUN ./mvnw -B clean package -DskipTests
+
+# Runtime
+FROM eclipse-temurin:25-jre
+
+WORKDIR /app
+
+# samme workaround i runtime
+ENV JAVA_TOOL_OPTIONS="-XX:+UnlockDiagnosticVMOptions -XX:-UseIntPolyIntrinsics"
+
+COPY --from=build /app/target/*.jar app.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "app.jar"]

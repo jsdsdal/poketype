@@ -1,0 +1,159 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #e9f0e8;
+    color: #263c35;
+}
+
+.game-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem 1rem;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 44rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-header {
+    text-align: center;
+}
+
+.game-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.game-header p {
+    color: #68786d;
+    margin-top: 0.5rem;
+}
+
+.scoreboard {
+    display: flex;
+    gap: 1rem;
+}
+
+.score-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.score-label {
+    color: #68786d;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.score-item span:last-child {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.game-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+    text-align: center;
+}
+
+.instruction {
+    color: #68786d;
+    font-size: 1rem;
+}
+
+#sprite {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin: 1rem auto;
+    image-rendering: pixelated;
+}
+
+.game-card h2 {
+    margin-bottom: 1.5rem;
+}
+
+.name-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 1.5rem 0;
+}
+
+.letter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 2rem;
+    height: 2.5rem;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    background: #edf3ed;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.letter.correct {
+    background: #bce4c5;
+    color: #245b35;
+}
+
+.letter.current {
+    outline: 2px solid #7eaa86;
+    background: #dcebdd;
+}
+
+.feedback {
+    min-height: 1.5rem;
+    color: #68786d;
+    font-size: 0.95rem;
+}
+
+.feedback.success {
+    color: #278044;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #68786d;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+    .game-card {
+        padding: 1.25rem;
+    }
+
+    .game-header h1 {
+        font-size: 2rem;
+    }
+
+    #sprite {
+        width: 150px;
+        height: 150px;
+    }
+}
